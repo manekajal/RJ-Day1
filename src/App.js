@@ -1,15 +1,23 @@
-
+import React from 'react';
 import './App.css';
 
-function App() {
-  
-  return (
-   <div className="App">
-  <h1> Hello From Bridgelabz</h1>
-   </div>
-   
- 
-  );
-}
+import logo from './assets/img/logo.jpg'
 
+class App extends React.Component{
+  constructor(){
+    super()
+    this.state = {
+      title: 'Hello From Bridgelabz'  
+    }
+  }
+  render(){
+    return (
+      <div>
+        <h1>{this.state.title}</h1>
+        <img src={logo}
+        alt="The Bridglabz logo : a Bridge to Employment through  lab works " />
+      </div>
+    );
+  }
+}
 export default App;
